@@ -309,9 +309,14 @@ To view your commit history:
 7. You want to push the changes you've made in `file.txt` to GitHub.
   
 --- 
-1. Start by creating a new directory called `LocalRepoProject` on your computer. Inside this directory, create a file named `hello.txt`, and open it in a text editor. Add the text "Hello, Git and GitHub!" to the file and save it. Then, initialize a Git repository in the `LocalRepoProject` directory and set the default branch to `main`.  
-2. Add the `hello.txt` file to the staging area so Git can track it, and then commit the file with a descriptive message, such as "Add hello.txt with greeting."  
-3. Next, go to GitHub and create a new repository named `LocalRepoProject`, ensuring that it is not initialized with a README, .gitignore, or license file. Link your local Git repository to this new GitHub repository by adding the GitHub repository URL as a remote. Finally, push your committed changes from your local repository to the `main` branch of the GitHub repository.  
+### 1: Clone the Repository
+Begin by cloning the repository from GitHub into a directory named `TobeLocal` and navigate into that directory.
+### 2: Make Changes and Commit
+Within the `TobeLocal` directory, create a new file called `notes.txt`, add a specific text to it, and commit the changes.
+### 3: Fork and Link the Repository
+Fork the repository to your own GitHub account, and then update your local repository to point to the newly created fork by modifying the remote URL.
+### 4: Push Further Changes
+Make additional modifications to `notes.txt`, commit those changes, and push them to your forked repository. 
 
 ## Understanding Branches in Git
 
@@ -391,6 +396,7 @@ Merging is a key Git operation that combines the histories of separate branches 
    ```
    If successful, Git will create a merge commit, combining the histories of both branches.
 ![Version Control](81a1f733ab868c5bc0398fb79886f50f.png)
+
 ### Handling Merge Conflicts
 
 Conflicts occur when Git can’t automatically reconcile differences between branches. Here’s how to manage them:
@@ -437,13 +443,12 @@ When a conflict arises, Git pauses the merge and marks conflicting sections in t
 
 ## Exercises
 
-1.You decide to name your branch `feature-info`. To create and switch to this new branch, you use the following command:  
- After creating `feature-details.txt` and adding the necessary feature information, you stage the file for commit with:  
-You're ready to commit your staged changes. You decide on a commit message that clearly describes your addition.  
-To commit, you use:  
-Now that your feature is ready, you need to switch back to the main branch to prepare for merging your changes.  
-The main branch is named `main`. To switch back, you use:  
-With your feature complete and tested, it's time to merge `feature-info` into the `main` branch. To do this, you use the command:  
+1.You decide to name your branch `feature-info`. To create and switch to this new branch, _______  
+ After creating `feature-details.txt` and adding the necessary feature information, you stage the file for commit with: ____ 
+You're ready to commit your staged changes. You decide on a commit message that clearly describes your addition. ______ 
+Now that your feature is ready, you need to switch back to the main branch to prepare for merging your changes.  ________
+The main branch is named `main`. To switch back, you use:_____________ 
+With your feature complete and tested, it's time to merge `feature-info` into the `main` branch. ________________
 
 2. 1. Create and switch to the `installation-updates` branch.  
    2. Add "Installation" instructions to `README.md`, stage the file, and commit the changes.  
