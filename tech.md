@@ -300,30 +300,17 @@ To view your commit history:
 
 ---
 
-1. **You've created a repository on GitHub named "repo-name"**. Now, you want to clone this repository to your local machine.
-  
-
-2. **Inside the newly cloned repository, you create a text file named `file.txt`**. You want to track this file in Git.
-  
-
-3. **After staging `file.txt`, you decide to commit your changes with a descriptive message**. 
-  
-
-4. **You want to see a summary of the changes you've made so far**. 
-  
-
-5. **You decide to push your changes to the remote GitHub repository**. The repository URL is already set up.
-
-6. **You make further changes to `file.txt`** and decide to check the status to see which files need to be staged.
- 
-
-7. **You want to push the changes you've made in `file.txt` to GitHub**.
+1. You've created a repository on GitHub named "repo-name". Now, you want to clone this repository to your local machine.
+2. Inside the newly cloned repository, you create a text file named `file.txt`. You want to track this file in Git.
+3. After staging `file.txt`, you decide to commit your changes with a descriptive message. 
+4. You want to see a summary of the changes you've made so far. 
+5. You decide to push your changes to the remote GitHub repository. The repository URL is already set up.
+6. You make further changes to `file.txt`** and decide to check the status to see which files need to be staged.
+7. You want to push the changes you've made in `file.txt` to GitHub.
   
 --- 
 1. Start by creating a new directory called `LocalRepoProject` on your computer. Inside this directory, create a file named `hello.txt`, and open it in a text editor. Add the text "Hello, Git and GitHub!" to the file and save it. Then, initialize a Git repository in the `LocalRepoProject` directory and set the default branch to `main`.  
-
 2. Add the `hello.txt` file to the staging area so Git can track it, and then commit the file with a descriptive message, such as "Add hello.txt with greeting."  
-
 3. Next, go to GitHub and create a new repository named `LocalRepoProject`, ensuring that it is not initialized with a README, .gitignore, or license file. Link your local Git repository to this new GitHub repository by adding the GitHub repository URL as a remote. Finally, push your committed changes from your local repository to the `main` branch of the GitHub repository.  
 
 ## Understanding Branches in Git
@@ -458,25 +445,34 @@ Now that your feature is ready, you need to switch back to the main branch to pr
 The main branch is named `main`. To switch back, you use:  
 With your feature complete and tested, it's time to merge `feature-info` into the `main` branch. To do this, you use the command:  
 
-2.You decide to name your branch `installation-updates`. To create and switch to this new branch, you use the  
-following command:  
-Pretend to add your "Installation" instructions to `README.md`, stage the file for commit, and commit your changes  
-with a message stating what you did:  
-Before your colleague starts on the "Usage" section, they switch back to the main branch, which is still in its original  
-state before your updates:  
-Your colleague names their branch `usage-updates`. They use the following command to create and switch to their  
-new branch:  
-After both updates are made, you attempt to merge your `installation-updates` branch into the main branch, and then  
-your colleague attempts to merge their `usage-updates` branch, resulting in a merge conflict. Complete the command  
-to merge the `installation-updates` branch first, and then simulate the conflict by attempting to merge the  
-`usage-updates` branch:  
-You decide to open the `README.md` file, manually combine both sets of instructions into one cohesive document,  
-and then mark the conflict as resolved by staging and committing the file with a new commit message:  
+2. 1. Create and switch to the `installation-updates` branch.  
+   2. Add "Installation" instructions to `README.md`, stage the file, and commit the changes.  
+   3. Switch back to the `main` branch.  
+   4. Create and switch to the `usage-updates` branch.  
+   5. Add "Usage" instructions to `README.md`, stage the file, and commit the changes.  
+   6. Switch to the `main` branch and merge the `installation-updates` branch.  
+   7. Merge the `usage-updates` branch into `main`.
+3.Create a new branch named `feature-updates` from the `main` branch. On this branch:  
+
+   1. Add a new file named `FEATURES.md` with a list of three features.  
+   2. Stage and commit the changes with an appropriate message.  
+   3. Create a sub-branch named `feature-details` from `feature-updates`.  
+   4. Add a detailed description for each feature in `FEATURES.md`.  
+   5. Stage and commit the updates with an appropriate message.  
+   6. Switch back to the `feature-updates` branch and merge the `feature-details` branch.  
+   7. Finally, merge the `feature-updates` branch into `main`.  
+
+Ensure all branches are deleted after completing the task, except `main`.
 
 - [Exercise 1](https://docs.google.com/document/d/1fw9H0Qk7Qz_pbqo9nCaMq79QV_lB8aPnD66z8ENvdfA/edit?usp=sharing)
 - [Exercise 2](https://docs.google.com/document/d/173xu7YquYIuSzZs-A6wxvHb_Q2yTxHPzR9lzrXjKTac/edit?usp=sharing)
 
 ---
+
+
+
+
+
 
 ## Introduction to GitHub
 ![Version Control](NewPicture(1).png)
@@ -515,7 +511,7 @@ After creating your account, familiarize yourself with these key areas:
 
 Repositories, or "repos," are the core of GitHub, serving as directories that store all project files, including their revision history. Repositories can be public or private and may contain code, documentation, images, and more. Understanding how to interact with repositories is essential for leveraging GitHub effectively.
 
-### 24 Forking
+###  Forking
 
 A forking is a process of owning other repository. After you clicked on fork button of a certain repository you will see that that repository became in your repository list. You can try by clicking the fork button on this repository.
 
@@ -580,8 +576,6 @@ git checkout -b branch-name # to create a branch and checkout at the same time
 git merge branch-name # to merge a branch to the current branch
 ```
 
-# Day 3
-
 ## Git repository user interface features
 
 Familiarize yourself with your GitHub account and available repository features.
@@ -600,8 +594,6 @@ Check what is available on your GitHub account settings
 
 ![](./images/github-repository-ui_2.png)
 
-# Day 4
-
 ## GitHub page
 
 Every GitHub repository allows you to generate a URL of your project. For instance, this [URL](https://asabeneh.github.io/10-days-of-git-and-github/) has been generated from this project GitHub page. To generate GitHub page URL, you should have an index.html at the top level inside the project.
@@ -617,7 +609,6 @@ After saving, a GitHub page URL will be generated automatically. That is your UR
 
 ![](./images/github-page-link.png)
 
-# Day 5
 
 ## Documenting on GitHub
 
@@ -633,7 +624,6 @@ Follow this [link](https://guides.github.com/features/mastering-markdown/) to le
 Every GitHub public repository has a wiki page. A wiki page allows you to write or document.
 ![](./images/wiki.png)
 
-# Day 6
 
 ## Collaborating on GitHub
 

@@ -1,0 +1,111 @@
+Question with Answer
+Question 1: You decide to name your branch feature-info. To create and switch to this new branch, you use the following command:
+After creating feature-details.txt and adding the necessary feature information, you stage the file for commit with:
+You're ready to commit your staged changes. You decide on a commit message that clearly describes your addition.
+To commit, you use:
+Now that your feature is ready, you need to switch back to the main branch to prepare for merging your changes. The main branch is named main. To switch back, you use:
+With your feature complete and tested, it's time to merge feature-info into the main branch. To do this, you use the command:
+
+Answer:
+
+To create and switch to the feature-info branch:
+
+bash
+Copy code
+git checkout -b feature-info
+After creating feature-details.txt and adding the necessary feature information, to stage the file for commit:
+
+bash
+Copy code
+git add feature-details.txt
+You're ready to commit your staged changes. To commit, you use:
+
+bash
+Copy code
+git commit -m "Add feature details to feature-details.txt"
+Now that your feature is ready, to switch back to the main branch:
+
+bash
+Copy code
+git checkout main
+With your feature complete and tested, to merge feature-info into the main branch:
+
+bash
+Copy code
+git merge feature-info
+
+
+
+
+2.
+        1.Create and switch to the installation-updates branch:
+
+        git checkout -b installation-updates
+
+        2.Add "Installation" instructions to README.md, stage the file, and commit the changes:
+
+        echo "## Installation Instructions" >> README.md  
+        git add README.md  
+        git commit -m "Add installation instructions to README.md"
+
+        3.Switch back to the main branch:
+
+        git checkout main
+        Create and switch to the usage-updates branch:
+
+        git checkout -b usage-updates
+
+        4.Add "Usage" instructions to README.md, stage the file, and commit the changes:
+
+        echo "## Usage Instructions" >> README.md  
+        git add README.md  
+        git commit -m "Add usage instructions to README.md"
+
+        5.Switch to the main branch and merge the installation-updates branch:
+
+        
+        git checkout main  
+        git merge installation-updates
+
+        6.Merge the usage-updates branch into main:
+
+        git merge usage-updates
+3.    1.Create a new branch named feature-updates from the main branch:
+
+        git checkout -b feature-updates
+
+        2.Add a new file named FEATURES.md with a list of three features:
+
+        echo -e "1. Feature One\n2. Feature Two\n3. Feature Three" > FEATURES.md
+        3.Stage and commit the changes with an appropriate message:
+
+        git add FEATURES.md
+        git commit -m "Add FEATURES.md with a list of three features"
+
+        4.Create a sub-branch named feature-details from feature-updates:
+
+        git checkout -b feature-details
+
+        5.Add a detailed description for each feature in FEATURES.md:
+
+        echo -e "1. Feature One - Detailed description.\n2. Feature Two - Detailed description.\n3. Feature Three - Detailed description." >> FEATURES.md
+        
+        6.Stage and commit the updates with an appropriate message:
+
+        git add FEATURES.md
+        git commit -m "Add detailed descriptions for features in FEATURES.md"
+
+        7.Switch back to the feature-updates branch and merge the feature-details branch:
+
+        git checkout feature-updates
+        git merge feature-details
+
+        8. Merge the feature-updates branch into main:
+
+        git checkout main
+        git merge feature-updates
+
+        9.Delete the feature-updates and feature-details branches:
+
+        git branch -d feature-updates
+        git branch -d feature-details
