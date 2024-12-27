@@ -1,6 +1,6 @@
 
 
-![Version Control](8a713ee0924680f9d4b8331c7dfe5bff.jpg)
+![Version Control](images/8a713ee0924680f9d4b8331c7dfe5bff.jpg)
 
 ## Table of Contents
 1. [What is Version Control?](#what-is-version-control)
@@ -232,7 +232,7 @@ To clone a remote repository:
   ```
 
 ---
-![Version Control](photo_2024-08-19_09-23-06.jpg)
+![Version Control](images/photo_2024-08-19_09-23-06.jpg)
 
 ### Viewing the Commit History
 
@@ -250,7 +250,7 @@ To view your commit history:
 
 ---
 
-![Feature Workflow](New%20Picture.png)
+![Feature Workflow](images/New%20Picture.png)
 
 ---
 ## Exercises
@@ -395,7 +395,7 @@ Merging is a key Git operation that combines the histories of separate branches 
    git merge feature-x
    ```
    If successful, Git will create a merge commit, combining the histories of both branches.
-![Version Control](81a1f733ab868c5bc0398fb79886f50f.png)
+![Version Control](images/81a1f733ab868c5bc0398fb79886f50f.png)
 
 ### Handling Merge Conflicts
 
@@ -480,7 +480,7 @@ Ensure all branches are deleted after completing the task, except `main`.
 
 
 ## Introduction to GitHub
-![Version Control](NewPicture(1).png)
+![Version Control](images/NewPicture(1).png)
 ### Welcome to GitHub!
 
 GitHub is the world's leading software development platform, where millions of developers and companies build, ship, and maintain software projects across various languages.
@@ -712,7 +712,3 @@ GitHub made open-source collaboration very easy. You can collaborate to any open
 ---
 
 
-
- [Task-1](https://telegra.ph/Task-1-09-30)
-
----
