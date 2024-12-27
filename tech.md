@@ -294,8 +294,9 @@ To view your commit history:
   ```
 
 ---
-
-
+1. Create a local repository named `LocalRepoProject` with a `hello.txt` file containing "Hello, Git and GitHub!" and set the branch to `main`.  
+2. Add and commit `hello.txt` with a message: "Add hello.txt with greeting."  
+3. Create a GitHub repository named `LocalRepoProject`, link it to the local repo, and push the changes to the `main` branch.
 
 ---
 
@@ -318,9 +319,12 @@ To view your commit history:
 
 7. **You want to push the changes you've made in `file.txt` to GitHub**.
   
-
-
 --- 
+1. Start by creating a new directory called `LocalRepoProject` on your computer. Inside this directory, create a file named `hello.txt`, and open it in a text editor. Add the text "Hello, Git and GitHub!" to the file and save it. Then, initialize a Git repository in the `LocalRepoProject` directory and set the default branch to `main`.  
+
+2. Add the `hello.txt` file to the staging area so Git can track it, and then commit the file with a descriptive message, such as "Add hello.txt with greeting."  
+
+3. Next, go to GitHub and create a new repository named `LocalRepoProject`, ensuring that it is not initialized with a README, .gitignore, or license file. Link your local Git repository to this new GitHub repository by adding the GitHub repository URL as a remote. Finally, push your committed changes from your local repository to the `main` branch of the GitHub repository.  
 
 ## Understanding Branches in Git
 
@@ -446,6 +450,29 @@ When a conflict arises, Git pauses the merge and marks conflicting sections in t
 
 ## Exercises
 
+1.You decide to name your branch `feature-info`. To create and switch to this new branch, you use the following command:  
+ After creating `feature-details.txt` and adding the necessary feature information, you stage the file for commit with:  
+You're ready to commit your staged changes. You decide on a commit message that clearly describes your addition.  
+To commit, you use:  
+Now that your feature is ready, you need to switch back to the main branch to prepare for merging your changes.  
+The main branch is named `main`. To switch back, you use:  
+With your feature complete and tested, it's time to merge `feature-info` into the `main` branch. To do this, you use the command:  
+
+2.You decide to name your branch `installation-updates`. To create and switch to this new branch, you use the  
+following command:  
+Pretend to add your "Installation" instructions to `README.md`, stage the file for commit, and commit your changes  
+with a message stating what you did:  
+Before your colleague starts on the "Usage" section, they switch back to the main branch, which is still in its original  
+state before your updates:  
+Your colleague names their branch `usage-updates`. They use the following command to create and switch to their  
+new branch:  
+After both updates are made, you attempt to merge your `installation-updates` branch into the main branch, and then  
+your colleague attempts to merge their `usage-updates` branch, resulting in a merge conflict. Complete the command  
+to merge the `installation-updates` branch first, and then simulate the conflict by attempting to merge the  
+`usage-updates` branch:  
+You decide to open the `README.md` file, manually combine both sets of instructions into one cohesive document,  
+and then mark the conflict as resolved by staging and committing the file with a new commit message:  
+
 - [Exercise 1](https://docs.google.com/document/d/1fw9H0Qk7Qz_pbqo9nCaMq79QV_lB8aPnD66z8ENvdfA/edit?usp=sharing)
 - [Exercise 2](https://docs.google.com/document/d/173xu7YquYIuSzZs-A6wxvHb_Q2yTxHPzR9lzrXjKTac/edit?usp=sharing)
 
@@ -488,34 +515,135 @@ After creating your account, familiarize yourself with these key areas:
 
 Repositories, or "repos," are the core of GitHub, serving as directories that store all project files, including their revision history. Repositories can be public or private and may contain code, documentation, images, and more. Understanding how to interact with repositories is essential for leveraging GitHub effectively.
 
-### Forking a Repository
+### 24 Forking
 
-**What is Forking?**  
-Forking creates a personal copy of someone else's project, allowing you to experiment with changes without affecting the original. It's often the first step in contributing to open-source projects.
+A forking is a process of owning other repository. After you clicked on fork button of a certain repository you will see that that repository became in your repository list. You can try by clicking the fork button on this repository.
 
-**How to Fork a Repository:**
-1. **Find the Repository**: Go to the desired repository's GitHub page.
-2. **Fork the Repository**: Click the "Fork" button at the top right. This creates a copy in your account.
-3. **Clone Your Fork (Optional)**: To work locally, you can clone your forked repository.
+Every repository that has some content in it has an active fork button on the right top corner.
+![fork](./images/fork.png)
 
-### Cloning a Repository from GitHub
+After forking, we can clone the repository and work on the cloned version of the project. After modifiying the original we can push to the forked verion of the repository. In addition, we can send a pull request to the original repo to contribute on the project.
 
-**What is Cloning?**  
-Cloning is the process of creating a local copy of a GitHub repository on your computer, allowing you to work on the project locally and push updates back to GitHub.
+_Congratulations! Now, you have a solid foundation of Git and GitHub_
 
-**How to Clone a Repository:**
-1. **Copy the Repository URL**: On the repository page, click the "Code" button and copy the URL under "Clone with HTTPS" or "Clone with SSH."
-2. **Clone the Repository**:
-   - Open your terminal or Git Bash.
-   - Navigate to the desired directory.
-   - Use the command:
-     ```bash
-     git clone https://github.com/username/repository-name.git
-     ```
-   Replace the URL with the copied one.
+## Git cheat sheet:
 
-**After Cloning:**  
-Once cloned, navigate into the created directory with the `cd` command to start working on the project.
+Here you have the basic git commands which might be useful:
+
+```bash
+git --version     # Check the version
+git help          # Get help from git
+git help commit   # Get help for the commit command
+git config        # Get information about configuration
+git config --list # Check all what is configured
+git config --global user.name "username" # Configuring git user name
+git config --global user.email "email"   # Configuring git user email
+
+git init          # Initialize git repository local machine
+git status        # Check changes or status of file(s) in repository
+
+git add filename1.txt # Adding only one file
+git add filename1.txt filename2.txt # Add multiple files
+git add . # Add all the files and folders to the staging area
+
+git commit -a # Stage and write a commit message in Nano
+git commit -m "commit message" # Write a commit message after staging
+git commit -am "commit message" # Grab everything & skip the stage process
+
+git log  # See the history on the repository
+git log --oneline
+git log -<limit>
+git log --author ="name" # To check change by specific user
+git log --graph # Visualize the history
+
+git diff # Compare working copy in the repository
+git diff --staged # Compare files in the staging area
+
+git checkout -- filename # To get working copy back
+git reset HEAD filename # Removes from the staging area / (unstage)
+git checkout <branch-name> <path to file> # Checkout file from different branch
+git checkout <commit-id> -- <path to file> # Checkout file from specific commit
+
+git remote -v  # View remote repository-Urls
+git remote add <remote name> repository-Url # Add a new remote
+git push -u remote master # Push the file into github
+git checkout <commit-id> -- filename #
+
+git rm filename1 # Delete one tracked file
+git mv filename1 filename2 # Delete tracked file(s)
+git mv filename1 foldername/filename1 # Move file to a folder
+
+git branch # to list branches
+git branch branch-name # to create a branch
+git checkout branch-name # to checkout to a certain branch
+git checkout -b branch-name # to create a branch and checkout at the same time
+git merge branch-name # to merge a branch to the current branch
+```
+
+# Day 3
+
+## Git repository user interface features
+
+Familiarize yourself with your GitHub account and available repository features.
+Git has account setting and repository setting. Navigate through the available features.
+
+Check the available repository features by clicking each buttons.
+
+![](./images/github-repository-ui_1.png)
+
+Check what is available on your GitHub account settings
+
+- watch this repository
+- Give start to this repository
+- fork this repository
+- clonge this repository
+
+![](./images/github-repository-ui_2.png)
+
+# Day 4
+
+## GitHub page
+
+Every GitHub repository allows you to generate a URL of your project. For instance, this [URL](https://asabeneh.github.io/10-days-of-git-and-github/) has been generated from this project GitHub page. To generate GitHub page URL, you should have an index.html at the top level inside the project.
+
+First go to the setting of this repository and then click on it. Go all the way down until you get the GitHub pages section, then select the master
+![](./images/github-page.png)
+
+After you select the master, a save button will appear and click save.
+
+![](./images/github-page-save.png)
+
+After saving, a GitHub page URL will be generated automatically. That is your URL for that specific project.
+
+![](./images/github-page-link.png)
+
+# Day 5
+
+## Documenting on GitHub
+
+## GitHub Markdown
+
+Markdown files can be used to write documentation or anything. The markdown file extension is .md
+
+Markdown is an HTML-like markup language that allows to write text and render it on a browser. If you are familiar with HTML, you pick the syntax of markdown in a matter of minutes.
+Follow this [link](https://guides.github.com/features/mastering-markdown/) to learn about markdown
+
+## GitHub wiki
+
+Every GitHub public repository has a wiki page. A wiki page allows you to write or document.
+![](./images/wiki.png)
+
+# Day 6
+
+## Collaborating on GitHub
+
+GitHub made open-source collaboration very easy. You can collaborate to any open-souce GitHub repository by forking the repository. In this section, let's learn how to make collaborate on an open source project:
+
+1. First Fork the [10-days-of-git-and-github](https://github.com/Asabeneh/10-days-of-git-and-github) repository
+2. After forking, clone this repository on your desktop
+3. Add your favorite educational links on Education Resouces categories. You can learn how to collaborate by adding links of best educational resouces on the category below. If the category is not exist, you create a new category.
+
+---
 
 ### Integrating Git with GitHub
 
