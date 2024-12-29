@@ -701,7 +701,7 @@ GitHub made open-source collaboration very easy. You can collaborate to any open
    git push origin <BRANCH-NAME>
    ```
 
-### Collaborating Through Pull Requests
+### Collaborating Through Pull Request
 
 1. **Navigate**: Go to your repository on GitHub.
 2. **Create Pull Request**: Click the "Pull requests" tab and then "New pull request."
